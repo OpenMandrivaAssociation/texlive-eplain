@@ -1,3 +1,9 @@
+# revision 23089
+# category Package
+# catalog-ctan /macros/eplain
+# catalog-date 2011-06-16 20:35:20 +0200
+# catalog-license gpl2
+# catalog-version 3.4
 Name:		texlive-eplain
 Version:	3.4
 Release:	1
@@ -73,6 +79,7 @@ psfrag, and url.
 #- source
 %doc %{_texmfdistdir}/source/eplain/eplain-source-3.4.zip
 %doc %{_texmfdistdir}/source/eplain/xeplain.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -87,3 +94,5 @@ mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
 mkdir -p %{buildroot}%{_infodir}
 mv %{buildroot}%{_texmfdir}/doc/info/*.info %{buildroot}%{_infodir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
