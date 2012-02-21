@@ -6,7 +6,7 @@
 # catalog-version 3.4
 Name:		texlive-eplain
 Version:	3.4
-Release:	2
+Release:	3
 Summary:	Extended plain tex macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/eplain
@@ -18,6 +18,7 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
+Requires(post):	texlive-tetex
 Requires:	texlive-pdftex
 Requires:	texlive-eplain.bin
 
@@ -46,6 +47,7 @@ psfrag, and url.
 %{_texmfdistdir}/tex/eplain/eplain.aux
 %{_texmfdistdir}/tex/eplain/eplain.ini
 %{_texmfdistdir}/tex/eplain/eplain.tex
+%_texmf_fmtutil_d/eplain
 %doc %{_texmfdistdir}/doc/eplain/AUTHORS
 %doc %{_texmfdistdir}/doc/eplain/COPYING
 %doc %{_texmfdistdir}/doc/eplain/ChangeLog
@@ -83,3 +85,9 @@ mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
 mkdir -p %{buildroot}%{_infodir}
 mv %{buildroot}%{_texmfdir}/doc/info/*.info %{buildroot}%{_infodir}
+mkdir -p %{buildroot}%{_texmf_fmtutil_d}
+cat > %{buildroot}%{_texmf_fmtutil_d}/eplain <<EOF
+#
+# from eplain:
+eplain pdftex language.dat -translate-file=cp227.tcx *eplain.ini
+EOF
