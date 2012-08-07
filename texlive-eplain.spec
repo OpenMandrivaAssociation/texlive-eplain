@@ -1,12 +1,12 @@
-# revision 23089
+# revision 26689
 # category Package
 # catalog-ctan /macros/eplain
-# catalog-date 2011-06-16 20:35:20 +0200
+# catalog-date 2012-05-24 17:00:23 +0200
 # catalog-license gpl2
 # catalog-version 3.4
 Name:		texlive-eplain
 Version:	3.4
-Release:	3
+Release:	4
 Summary:	Extended plain tex macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/eplain
