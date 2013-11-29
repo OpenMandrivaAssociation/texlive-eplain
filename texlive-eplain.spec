@@ -1,12 +1,12 @@
-# revision 26689
+# revision 31819
 # category Package
 # catalog-ctan /macros/eplain
-# catalog-date 2012-05-24 17:00:23 +0200
+# catalog-date 2013-10-01 08:28:26 +0200
 # catalog-license gpl2
-# catalog-version 3.4
+# catalog-version 3.6
 Name:		texlive-eplain
-Version:	3.4
-Release:	4
+Version:	3.6
+Release:	1
 Summary:	Extended plain tex macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/eplain
@@ -53,23 +53,21 @@ psfrag, and url.
 %doc %{_texmfdistdir}/doc/eplain/ChangeLog
 %doc %{_texmfdistdir}/doc/eplain/INSTALL
 %doc %{_texmfdistdir}/doc/eplain/NEWS
-%doc %{_texmfdistdir}/doc/eplain/PROJECTS
 %doc %{_texmfdistdir}/doc/eplain/README
-%doc %{_texmfdistdir}/doc/eplain/README.TOP
 %doc %{_texmfdistdir}/doc/eplain/demo/Makefile
 %doc %{_texmfdistdir}/doc/eplain/demo/lscommnt.tex
 %doc %{_texmfdistdir}/doc/eplain/demo/xhyper.tex
-%doc %{_texmfdistdir}/doc/eplain/doc/eplain.html
-%doc %{_texmfdistdir}/doc/eplain/doc/eplain.pdf
-%doc %{_texmfdistdir}/doc/eplain/doc/lscommnt.jpg
-%doc %{_texmfdistdir}/doc/eplain/doc/xhyper.jpg
+%doc %{_texmfdistdir}/doc/eplain/eplain.html
+%doc %{_texmfdistdir}/doc/eplain/eplain.pdf
+%doc %{_texmfdistdir}/doc/eplain/lscommnt.jpg
 %doc %{_texmfdistdir}/doc/eplain/util/idxuniq
 %doc %{_texmfdistdir}/doc/eplain/util/trimsee
+%doc %{_texmfdistdir}/doc/eplain/xhyper.jpg
 %doc %{_infodir}/eplain.info*
 %doc %{_mandir}/man1/eplain.1*
-%doc %{_texmfdir}/doc/man/man1/eplain.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/eplain.man1.pdf
 #- source
-%doc %{_texmfdistdir}/source/eplain/eplain-source-3.4.zip
+%doc %{_texmfdistdir}/source/eplain/eplain-source-3.6.zip
 %doc %{_texmfdistdir}/source/eplain/xeplain.tex
 
 #-----------------------------------------------------------------------
@@ -80,11 +78,11 @@ psfrag, and url.
 
 %install
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
 mkdir -p %{buildroot}%{_infodir}
-mv %{buildroot}%{_texmfdir}/doc/info/*.info %{buildroot}%{_infodir}
+mv %{buildroot}%{_texmfdistdir}/doc/info/*.info %{buildroot}%{_infodir}
 mkdir -p %{buildroot}%{_texmf_fmtutil_d}
 cat > %{buildroot}%{_texmf_fmtutil_d}/eplain <<EOF
 #
