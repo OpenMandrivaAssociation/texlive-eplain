@@ -6,7 +6,7 @@
 # catalog-version 3.6
 Name:		texlive-eplain
 Version:	3.6
-Release:	9
+Release:	10
 Summary:	Extended plain tex macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/eplain
