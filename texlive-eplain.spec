@@ -1,12 +1,6 @@
-# revision 33826
-# category Package
-# catalog-ctan /macros/eplain
-# catalog-date 2013-11-21 21:20:37 +0100
-# catalog-license gpl2
-# catalog-version 3.6
 Name:		texlive-eplain
-Version:	3.6
-Release:	10
+Version:	3.8
+Release:	1
 Summary:	Extended plain tex macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/eplain
@@ -42,33 +36,14 @@ psfrag, and url.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/eplain/arrow.tex
-%{_texmfdistdir}/tex/eplain/btxmac.tex
-%{_texmfdistdir}/tex/eplain/eplain.aux
-%{_texmfdistdir}/tex/eplain/eplain.ini
-%{_texmfdistdir}/tex/eplain/eplain.tex
+%{_texmfdistdir}/tex/eplain
 %_texmf_fmtutil_d/eplain
-%doc %{_texmfdistdir}/doc/eplain/AUTHORS
-%doc %{_texmfdistdir}/doc/eplain/COPYING
-%doc %{_texmfdistdir}/doc/eplain/ChangeLog
-%doc %{_texmfdistdir}/doc/eplain/INSTALL
-%doc %{_texmfdistdir}/doc/eplain/NEWS
-%doc %{_texmfdistdir}/doc/eplain/README
-%doc %{_texmfdistdir}/doc/eplain/demo/Makefile
-%doc %{_texmfdistdir}/doc/eplain/demo/lscommnt.tex
-%doc %{_texmfdistdir}/doc/eplain/demo/xhyper.tex
-%doc %{_texmfdistdir}/doc/eplain/eplain.html
-%doc %{_texmfdistdir}/doc/eplain/eplain.pdf
-%doc %{_texmfdistdir}/doc/eplain/lscommnt.jpg
-%doc %{_texmfdistdir}/doc/eplain/util/idxuniq
-%doc %{_texmfdistdir}/doc/eplain/util/trimsee
-%doc %{_texmfdistdir}/doc/eplain/xhyper.jpg
+%doc %{_texmfdistdir}/doc/eplain
 %doc %{_infodir}/eplain.info*
 %doc %{_mandir}/man1/eplain.1*
 %doc %{_texmfdistdir}/doc/man/man1/eplain.man1.pdf
 #- source
-%doc %{_texmfdistdir}/source/eplain/eplain-source-3.6.zip
-%doc %{_texmfdistdir}/source/eplain/xeplain.tex
+%doc %{_texmfdistdir}/source/eplain
 
 #-----------------------------------------------------------------------
 %prep
