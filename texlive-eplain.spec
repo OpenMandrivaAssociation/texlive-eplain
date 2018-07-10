@@ -1,6 +1,6 @@
 Name:		texlive-eplain
 Version:	3.8
-Release:	1
+Release:	2
 Summary:	Extended plain tex macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/eplain
