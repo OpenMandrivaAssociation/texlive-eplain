@@ -1,13 +1,13 @@
 Name:		texlive-eplain
-Version:	3.8
-Release:	3
+Version:	64721
+Release:	1
 Summary:	Extended plain tex macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/eplain
 License:	GPL2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eplain.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eplain.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eplain.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eplain.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eplain.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eplain.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +27,12 @@ autopict (a package instance of the LaTeX picture code),
 psfrag, and url.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -47,7 +47,8 @@ psfrag, and url.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
