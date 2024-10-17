@@ -3,7 +3,7 @@ Version:	71409
 Release:	1
 Summary:	Extended plain tex macros
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/eplain
+URL:		https://www.ctan.org/tex-archive/macros/eplain
 License:	GPL2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eplain.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/eplain.doc.r%{version}.tar.xz
