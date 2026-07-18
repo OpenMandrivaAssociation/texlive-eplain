@@ -1,5 +1,6 @@
 %global tl_name eplain
 %global tl_revision 71409
+%global tl_bin_links eplain:pdftex
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -24,6 +25,8 @@ Requires:	texlive(latex-fonts)
 Requires:	texlive(pdftex)
 Requires:	texlive(plain)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 An extended version of the plain TeX format, adding support for
